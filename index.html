@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nutrition Plan - Food Nutrition Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <span class = "brand" >Nutrition Plan - Food Nutrition Application</span>
+        <a href="index.html" class="active">Nutrional Info</a>
+        <a href = "records.html" id="recordsLink">Food Intake Records</a>
+    </nav>
+
+    <main>
+        <h1>Nutrional Information</h1>
+        <div class="box">
+
+            <label>Food</label>
+            <input type ="text" id="query" placeholder="enter food, vegetables or fruits">
+
+            <label>Diet</label>
+            <select id="diet">
+                <option value="balanced">Balanced</option>
+                <option value="low-carb">Low carb</option>
+                <option value="high-protein">High protein</option>
+                <option value="low-fat">Low fat</option>
+                <option value="low-calorie">Low calorie</option>
+            </select>
+
+            <button id="searchBtn">Search</button>
+            <label>
+                <input type="checkbox" id="suitableOnly">Show suitable foods only
+            </label>
+            <p id="status"></p>
+        </div>
+
+        <div class="box">
+            <h2>Result (100 gram)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Food</th>
+                        <th>kcal (kilocalorie)</th>
+                        <th>Protein</th>
+                        <th>Carbohydrate</th>
+                        <th>Fat</th>
+                        <th>Fibre</th>
+                        <th>Diet</th>
+                        <th>Add to record</th>
+                </tr>
+                </thead>
+                <tbody id="resultsBody"></tbody>
+            </table>
+        </div>
+        <div id="confirmBg" class="modal-bg">
+            <div class="modal">
+                <p id="confirmText"></p>
+            <button id="yesBtn">Yes, add</button>
+            <button id="noBtn" class="secondary">Cancel</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="renderer.js"></script>
+</body>
+</html>
